@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Проверка</title>
+    <style>
+        body {
+            background-color: lightblue;
+            padding: 30px;
+        }
+    </style>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("passwordBox")
+            var passwordText = password.value
+            if(passwordText == "2011") {
+                return true;
+        }
+            alert("Доступ запрещен! Вы неверно ввели капчу!")
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <p style="font-size: 30pt;">Проверка!</p>
+    <p>Для входа введите капчу! Капча 2011</p>
+    <p>Пароль:<input id="passwordBox" type="password"/></p>
+    <a href="page.html" onclick="return checkPassword();">
+        Жми здесь, чтобы отправить капчу и посмотреть сайт
+    </a>
+</body>
+</html>
